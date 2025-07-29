@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Totakeke - Shiba Inu Memecoin on BNB Chain</title>
+  <meta name="description" content="Totakeke is a new Shiba Inu memecoin on Binance Smart Chain. Join our Telegram Maestro Bot for easy buying, follow us on X, and become part of the meme revolution.">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Orbitron', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(45deg, #1e3c72, #2a5298);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 2em;
+      color: #FFA500;
+      cursor: pointer;
+    }
+    .logo:hover { animation: bounce 1s infinite; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li { margin: 0 15px; }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: #FFD700;
+    }
+    @media(max-width: 600px) {
+      header { flex-direction: column; }
+      nav ul { flex-direction: column; margin-top: 10px; }
+      nav ul li { margin: 5px 0; }
+    }
+
+    /* Hero Section */
+    #hero {
+      background: url('https://cdn.pixabay.com/photo/2021/05/29/07/06/shiba-6292660_1280.jpg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    #hero-content { position: relative; z-index: 1; max-width: 800px; }
+    #hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-out;
+    }
+    #hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      animation: fadeIn 2s 0.5s ease-out;
+    }
+    #hero a.button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #FFA500;
+      color: #fff;
+      font-size: 1.1em;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    #hero a.button:hover {
+      background: #cc8400;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* About Section */
+    #about {
+      background: #fff;
+      color: #333;
+      padding: 60px 20px;
+    }
+    .about-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .about-img, .about-text { flex: 1 1 300px; }
+    .about-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .about-text {
+      margin-left: 20px;
+    }
+    @media(max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-text { margin: 20px 0 0 0; }
+    }
+
+    /* Buy Section */
+    #buy {
+      background: #f5f5f5;
+      color: #333;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    #buy-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    #buy a.btn {
+      display: inline-block;
+      margin: 10px 10px 10px 0;
+      padding: 12px 25px;
+      background: #FFA500;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    #buy a.btn:hover {
+      background: #cc8400;
+    }
+    #buy button#copyBtn {
+      margin-left: 10px;
+      padding: 8px 15px;
+      background: #FFA500;
+      color: #fff;
+      border: none;
+      font-size: 0.95em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #buy button#copyBtn:hover {
+      background: #cc8400;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #2a5298;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    #contact a { color: #FFD700; text-decoration: none; }
+    #contact a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8em;
+    }
+    footer a { color: #FFA500; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">TOTAKEKE</div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#buy">Buy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero">
+  <div id="hero-content">
+    <h1>Welcome to Totakeke</h1>
+    <p>The Shiba Inu memecoin born on BNB Chain, continuing the legacy of @LordCheems_bsc. Fasten your seatbelts, we're headed to the moon!</p>
+    <a href="#buy" class="button">Buy Now</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-container">
+    <div class="about-img">
+      <img src="https://images.pexels.com/photos/2187304/pexels-photo-2187304.jpeg?cs=srgb&amp;dl=pexels-evgeny-tchebotarev-1058775-2187304.jpg&amp;fm=jpg" alt="Totakeke the Shiba Inu">
+    </div>
+    <div class="about-text">
+      <h2>About Totakeke</h2>
+      <p><strong>Totakeke</strong> is the bold new twin brother of the $300M legend, @LordCheems_bsc. We've arrived on BNB Chain to carry on Cheems' legacy and claim our rightful place among the meme-tokens that defy gravity. Driven by community spirit and Shiba swagger, Totakeke blends humor with ambition.</p>
+      <p>Join our flock of passionate holders and become part of the story. Together we'll build unstoppable momentum on Binance Smart Chain, spread awareness, and have fun along the way. 🚀🐕</p>
+    </div>
+  </div>
+</section>
+
+<section id="buy">
+  <div id="buy-container">
+    <h2>How to Buy</h2>
+    <p>The easiest way to buy Totakeke is through our Maestro Bot on Telegram. Simply click the button below to launch the bot:</p>
+    <p>Once you launch the bot, follow the step-by-step prompts to swap your BNB for Totakeke. Maestro will guide you through the process securely.</p>
+    <a href="https://t.me/Maestro" class="btn" target="_blank">Buy via Maestro Bot (Telegram)</a>
+    <p>Or swap directly on PancakeSwap:</p>
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0xd743d3c50ebd82f9173b599383979d10f3494444" class="btn" target="_blank">Swap on PancakeSwap</a>
+    <p>Contract Address: <span id="contract">0xd743d3c50ebd82f9173b599383979d10f3494444</span>
+      <button id="copyBtn" onclick="copyAddress()">Copy Address</button>
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Join the Community</h2>
+  <p>Follow us on X (Twitter): <a href="https://x.com/_Totakekebsc" target="_blank">@_Totakekebsc</a></p>
+  <p>Need help with the bot? Join Maestro support: <a href="https://t.me/MaestroSupport" target="_blank">@MaestroSupport</a></p>
+</section>
+
+<footer>
+  <p>Disclaimer: This site is for informational purposes only and does not constitute financial advice. Always do your own research.</p>
+  <p>© 2025 Totakeke. All rights reserved.</p>
+</footer>
+
+<script>
+function copyAddress() {
+  navigator.clipboard.writeText('0xd743d3c50ebd82f9173b599383979d10f3494444');
+  var btn = document.getElementById('copyBtn');
+  btn.innerText = 'Copied!';
+  setTimeout(function() { btn.innerText = 'Copy Address'; }, 2000);
+}
+</script>
+
+
+</body>
+</html>
